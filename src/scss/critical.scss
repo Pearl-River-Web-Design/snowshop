@@ -22,7 +22,7 @@
   --cta-bg: var(--primary-color);
 
   // CONTAINER
-  --container-max-width: 70rem;
+  --container-max-width: 90rem;
   --container-width: 90%;
 
   --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
@@ -226,6 +226,7 @@ footer {
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.5px;
+    text-align: center;
   }
 
   &__text {
@@ -237,6 +238,7 @@ footer {
 
   &__buttons {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
   }
@@ -245,8 +247,7 @@ footer {
 .services {
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: clamp(1rem, 0.2958rem + 3.0047vw, 3rem);
   }
 
@@ -259,6 +260,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
   }
 
@@ -276,6 +278,14 @@ footer {
 }
 
 @media (min-width: 48rem) {
+  .hero {
+    &__buttons {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
   header {
     .nav-toggle {
       height: 0;
@@ -306,9 +316,6 @@ footer {
       }
     }
   }
-}
-
-@media (min-width: 64rem) {
   .hero {
     .container {
       flex-direction: row;
@@ -316,6 +323,10 @@ footer {
 
     &__content {
       align-items: flex-start;
+    }
+
+    &__title {
+      text-align: start;
     }
   }
 }
