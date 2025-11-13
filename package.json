@@ -6,7 +6,6 @@
   "scripts": {
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/snowshop/",
     "start": "npx eleventy --serve",
-    "blog": "npx decap-server",
     "lint": "prettier --write ."
   },
   "repository": {
