@@ -6,8 +6,21 @@
         class="logo"
         aria-label="{{ site.name }} - home"
       >
-        {% include "svgs/logo.svg" %}
-        <p class="logo__company-name">Company</p>
+        <picture>
+          <source
+            media="(min-width:650px)"
+            srcset="{{ '/assets/images/logo.png' | url }}"
+          />
+          <source
+            media="(min-width:465px)"
+            srcset="{{ '/assets/images/logo.png' | url }}"
+          />
+          <img
+            src="{{ '/assets/images/logo-no-text.png' | url }}"
+            alt=""
+            class="logo-img"
+          />
+        </picture>
       </a>
       <nav
         class="main-nav"
