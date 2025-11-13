@@ -166,19 +166,16 @@ header .navbar {
   justify-content: space-between;
 }
 header .logo {
-  max-height: 4rem;
+  max-height: clamp(5rem, 3.9437rem + 4.507vw, 8rem);
   color: var(--primary-color);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin: 0 auto;
 }
-header .logo__company-name {
-  font-size: 2rem;
-  font-weight: 900;
-}
-header .logo svg {
-  height: 4rem;
+header .logo .logo-img {
+  height: clamp(5rem, 3.9437rem + 4.507vw, 8rem);
   width: auto;
 }
 header .nav-toggle {
@@ -313,6 +310,9 @@ footer {
   }
 }
 @media (min-width: 64rem) {
+  header .logo {
+    margin: 0;
+  }
   header .nav-toggle {
     height: 0;
     visibility: hidden;
