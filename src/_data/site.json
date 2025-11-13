@@ -1,13 +1,12 @@
 {
-  "name": "Eleventy Template",
+  "name": "Snowshop",
   "navigation": [
     {
+      "text": "Home",
+      "url": "/"
+    },{
       "text": "About",
       "url": "/about/"
-    },
-    {
-      "text": "Blog",
-      "url": "/blog/"
     },
     {
       "text": "Services",
@@ -20,18 +19,18 @@
   ],
   "services": [
     {
-      "title": "Service 1",
-      "description": "A one to two sentence description of the service to help users understand",
+      "title": "Ski & Snowboard Tune Up",
+      "description": "Base grinding and structuring, edge sharpening and polish, and a machine wax",
       "icon": "icon-brush.svg"
     },
     {
-      "title": "Service 2",
-      "description": "A one to two sentence description of the service to help users understand",
+      "title": "Repairs",
+      "description": "We can fix almost any aspect of your skis or snowboard. Bindings, edges, boots, poles, straps, snaps, and more.",
       "icon": "icon-dinner-tray.svg"
     },
     {
-      "title": "Service 3",
-      "description": "A one to two sentence description of the service to help users understand",
+      "title": "Boot Fitting & Molding",
+      "description": "We will find the perfect boots for you or adjust your current boots to fit snug as a bug in a rug.",
       "icon": "icon-calculator.svg"
     }
   ]
