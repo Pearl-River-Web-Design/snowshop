@@ -4,21 +4,22 @@
 
 :root {
   // COLORS
-  --primary-color: #1e3a8a;
+  --primary-color: #2c19fa;
 
-  --accent-color: rgb(250, 218, 26, 1);
+  --accent-color: #fada1a;
   --accent-hover: rgb(250, 218, 26, 0.8);
 
   --bg-color: #fcfcfc;
 
-  --text-color: #333;
-  --text-secondary: #555;
-  --text-muted: #666;
+  --text-color: #3f3d50;
+  --text-secondary: rgb(63, 61, 80, 0.8);
+  --text-muted: rgb(63, 61, 80, 0.6);
 
   --border-color: #e0e0e0;
+
   --card-bg: #ffffff;
-  --footer-bg: #111;
-  --cta-bg: #1a1a1a;
+  --footer-bg: var(--primary-color);
+  --cta-bg: var(--primary-color);
 
   // CONTAINER
   --container-max-width: 70rem;
@@ -32,8 +33,6 @@
   :root {
     --primary-color: #3b82f6;
 
-    --accent-color: #a3e635;
-
     --bg-color: #0f0f0f;
 
     --text-color: #e5e5e5;
@@ -42,8 +41,6 @@
 
     --border-color: #333;
     --card-bg: #1a1a1a;
-    --footer-bg: #000;
-    --cta-bg: #000;
   }
 }
 
@@ -75,18 +72,31 @@ p {
   color: var(--accent-color);
 }
 
-.btn--primary {
+.btn {
   display: inline-block;
   padding: 1em 2em;
   text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-muted);
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background-color: var(--accent-color);
+  color: var(--text-muted);
 
   &:hover {
     background-color: var(--accent-hover);
+  }
+}
+
+.btn--outline {
+  color: var(--text-muted);
+  border: 2px solid var(--border-color);
+  &:hover {
+    background-color: var(--accent-hover);
+    border-color: transparent;
   }
 }
 
@@ -199,15 +209,16 @@ footer {
 
   .container {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: clamp(2rem, -0.1127rem + 9.0141vw, 8rem);
+    gap: clamp(4rem, 2.5915rem + 6.0094vw, 8rem);
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 3rem;
+    align-items: center;
+    gap: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
   }
 
   &__title {
@@ -222,6 +233,12 @@ footer {
     font-weight: 500;
     max-width: 65ch;
     letter-spacing: -0.1px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
@@ -287,6 +304,18 @@ footer {
       a {
         color: var(--text-color);
       }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    .container {
+      flex-direction: row;
+    }
+
+    &__content {
+      align-items: flex-start;
     }
   }
 }
