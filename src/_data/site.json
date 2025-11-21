@@ -22,17 +22,17 @@
     {
       "title": "Ski & Snowboard Tune Up",
       "description": "Base grinding and structuring, edge sharpening and polish, and a machine wax",
-      "icon": "icon-brush.svg"
+      "icon": "icon-skis.svg"
     },
     {
       "title": "Repairs",
       "description": "We can fix almost any aspect of your skis or snowboard. Bindings, edges, boots, poles, straps, snaps, and more.",
-      "icon": "icon-dinner-tray.svg"
+      "icon": "icon-repair.svg"
     },
     {
       "title": "Boot Fitting & Molding",
       "description": "We will find the perfect boots for you or adjust your current boots to fit snug as a bug in a rug.",
-      "icon": "icon-calculator.svg"
+      "icon": "icon-ski-boot.svg"
     }
   ]
 }
