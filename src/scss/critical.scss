@@ -185,13 +185,25 @@ header {
   }
 
   .nav__item {
+    position: relative;
     a {
       text-decoration: none;
       color: var(--text-muted);
+    }
 
-      &:hover {
-        text-decoration: underline;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background-color: var(--accent-color);
+      bottom: -4px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }
