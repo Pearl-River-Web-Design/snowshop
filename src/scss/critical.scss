@@ -163,7 +163,7 @@ header {
   }
 
   .main-nav.visible {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-color);
     visibility: visible;
     height: auto;
     top: 100%;
@@ -175,12 +175,18 @@ header {
     gap: 1.5rem;
     padding: 2rem 1.5rem 1.5rem;
     z-index: 1000;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     .nav__list {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
       text-align: center;
+    }
+
+    .btn {
+      visibility: hidden;
+      position: absolute;
     }
   }
 
