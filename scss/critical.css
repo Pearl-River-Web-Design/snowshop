@@ -210,7 +210,7 @@ header .main-nav {
   font-size: 1.125rem;
 }
 header .main-nav.visible {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-color);
   visibility: visible;
   height: auto;
   top: 100%;
@@ -222,6 +222,7 @@ header .main-nav.visible {
   gap: 1.5rem;
   padding: 2rem 1.5rem 1.5rem;
   z-index: 1000;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 header .main-nav.visible .nav__list {
   display: flex;
@@ -229,12 +230,29 @@ header .main-nav.visible .nav__list {
   gap: 1.5rem;
   text-align: center;
 }
+header .main-nav.visible .btn {
+  visibility: hidden;
+  position: absolute;
+}
+header .nav__item {
+  position: relative;
+}
 header .nav__item a {
   text-decoration: none;
   color: var(--text-muted);
 }
-header .nav__item a:hover {
-  text-decoration: underline;
+header .nav__item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-color);
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+header .nav__item:hover::after {
+  width: 100%;
 }
 
 footer {
